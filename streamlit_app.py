@@ -82,7 +82,7 @@ def load_ensemble_model():
             st.info("💻 Using CPU for inference")
         
         # Load checkpoint
-        checkpoint = torch.load('best_weld_classifier.pth', map_location=device)
+        checkpoint = torch.load('ensemble_weld_classifier.pth', map_location=device)
         
         # Validate checkpoint
         required_keys = ['class_names', 'efficientnet_state_dict', 'resnet50_state_dict', 'ensemble_accuracy']
